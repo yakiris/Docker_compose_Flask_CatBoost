@@ -2,9 +2,9 @@
 Итоговый проект курса "Машинное обучение в бизнесе"  
 
 Стек:  
-
 ML: catboost, pandas, numpy  
 API: flask  
+
 Данные: с kaggle - https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists  
 
 Задача: предсказать по анкетным данным верояность заинтересованности кандидатов на вакансию Data Scientist.  
