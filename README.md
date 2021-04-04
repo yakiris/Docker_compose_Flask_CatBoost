@@ -41,18 +41,18 @@ docker-compose up
 Переходим на localhost:8181
 
 ### REST API
-Postman.
-POST: 0.0.0.0:8180/predict
-Key: Content-Type, Value: application/json
-Body:
-{
-    "gender": "Male",
-    "relevent_experience": "Has relevent experience",
-    "enrolled_university": "Full time course",
-    "education_level": "Graduate",
-    "major_discipline": "Humanities",
-    "experience": ">15",
-    "company_size": "<100",
-    "company_type": "Pvt Ltd",
-    "last_new_job": "never"
+Postman.  
+POST: 0.0.0.0:8180/predict  
+Key: Content-Type, Value: application/json  
+Body:  
+{  
+    "gender": "Male",  
+    "relevent_experience": "Has relevent experience",  
+    "enrolled_university": "Full time course",  
+    "education_level": "Graduate",  
+    "major_discipline": "Humanities",  
+    "experience": ">15",  
+    "company_size": "<100",  
+    "company_type": "Pvt Ltd",  
+    "last_new_job": "never"  
 }
