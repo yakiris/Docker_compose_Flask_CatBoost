@@ -1,0 +1,57 @@
+version: '3.4'
+
+networks:
+  vpcbr:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
+
+services:
+  back:
+    container_name: back
+    build:
+      context: .
+    command: flask run --host=0.0.0.0
+    # command: gunicorn -w 1 -b 0.0.0.0:8181 app.run_backend:app --reload
+    environment:
+      - FLASK_APP=app/run_backend.py
+      - FLASK_DEBUG=1
+      - FLASK_RUN_PORT=8180
+      - PYTHONBUFFERED=True
+      # - THREADED=True
+    ports:
+      - "8180:8180"
+    volumes:
+      - ./:/my_app
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.5
+  front:
+    container_name: front
+    build:
+      context: .
+      network: host
+    command: flask run --host=0.0.0.0
+    # command: gunicorn -w 1 -b 0.0.0.0:8181 app.front.run_frontend:app --reload
+    environment:
+      - FLASK_APP=app/front/run_frontend.py
+      - FLASK_DEBUG=1
+      - FLASK_RUN_PORT=8181
+      - PYTHONBUFFERED=True
+      # - THREADED=True
+    ports:
+      - "8181:8181"
+    volumes:
+      - ./:/my_app
+    networks:
+      vpcbr:
+        ipv4_address: 10.5.0.6
+  # jupyter:
+  #   container_name: jupyter
+  #   image: jupyter/scipy-notebook:2c80cf3537ca
+  #   ports:
+  #     - "8888:8888"
+  #   volumes:
+  #     - ./:/my_app

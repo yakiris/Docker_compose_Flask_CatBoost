@@ -1,0 +1,6 @@
+__pycache__/
+logs/
+*.log
+Guide.txt
+X_test.csv
+y_test.csv
