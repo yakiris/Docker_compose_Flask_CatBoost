@@ -1,4 +1,4 @@
-# python-flask-docker  
+# python-flask-docker-compose  
 Итоговый проект курса "Машинное обучение в бизнесе"  
 
 Стек:  
