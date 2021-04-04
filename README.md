@@ -1,5 +1,5 @@
 # python-flask-docker  
-Итоговый проект (пример) курса "Машинное обучение в бизнесе"  
+Итоговый проект курса "Машинное обучение в бизнесе"  
 
 Стек:  
 
@@ -7,7 +7,7 @@ ML: catboost, pandas, numpy
 API: flask  
 Данные: с kaggle - https://www.kaggle.com/arashnic/hr-analytics-job-change-of-data-scientists  
 
-Задача: предсказать по анкетным данным верояность заинтересованности кандидатов на вакансию Data Scientists.  
+Задача: предсказать по анкетным данным верояность заинтересованности кандидатов на вакансию Data Scientist.  
 
 Бинарная классификация.  
 target: 0(не заинтересован), 1(заинтересован)  
@@ -28,7 +28,7 @@ target: 0(не заинтересован), 1(заинтересован)
 
 ### Клонируем репозиторий и создаем образ  
 ```
-$ git clone https://github.com/fimochka-sudo/GB_docker_flask_example.git  
+$ https://github.com/yakiris/Docker_compose_Flask_CatBoost.git
 $ cd Docker_compose_Flask_CatBoost  
 $ docker-compose build  
 ```
